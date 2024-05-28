@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    height: 4rem;
+    border-bottom: 0.1ch crimson solid;
+    width: 100vw;
+    gap: 2ch;
+    padding: 1ch;
+    box-sizing: border-box;
+
+    p {
+        font-size: 1.5em;
+        font-weight: 600;
+        align-self: center;
+    }
+}

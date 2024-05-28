@@ -15,8 +15,11 @@
 ### Ordre de dev durant la correction
 - Composant Header
 - Composant TodoList _(Simple)_
+    - Structure de base
 - Composant TaskForm
     - [Si basé sur un mockup] Adapter le code html en JSX 
     - Ajouter le style _(SCSS)_
     - Gestion du formulaire _(Binding entre le form et le state)_
     - Interaction avec TodoList _(Props "Event" -> pour envoyé l'element au parent)_
+    - (Bonus) Gestion du focus
+- - Composant TodoList _(Simple)_

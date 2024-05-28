@@ -1,6 +1,5 @@
-import { useId } from 'react';
 import style from './TaskForm.module.scss';
-import { useState } from 'react';
+import { useId, useState, useRef } from 'react';
 
 // Le composant "TaskForm"
 const TaskForm = ({
@@ -14,6 +13,11 @@ const TaskForm = ({
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');
     const [priority, setPriority] = useState('normal');
+
+    // Utilisation d'une "ref" pour interagir avec une balise (Access impératif)
+    //  - Necessite de le lier avec la balise -> « ref={inputRef} »
+    //  - Il est possible d'interagir avec la balise via la propriété "current"
+    const inputRef = useRef();
 
     // Gestion du submit du formlaire
     const handleFormSubmit = (e) => {
@@ -36,6 +40,9 @@ const TaskForm = ({
         setDesc('');
         setPriority('normal');
 
+        // Placer le focus sur l'input "name"
+        inputRef.current.focus();
+
     }
 
     // Rendu
@@ -44,6 +51,7 @@ const TaskForm = ({
 
             <label htmlFor={formId+'-name'}>Nom</label>
             <input id={formId+'-name'} type="text" required
+                ref={inputRef}
                 value={name} onChange={e => setName(e.target.value)} />
 
             <label htmlFor={formId+'-desc'}>Description</label>

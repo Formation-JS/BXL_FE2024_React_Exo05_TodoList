@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import TaskForm from "../../components/TaskForm/TaskForm";
+import TaskList from "../../components/TaskList/TaskList";
 
 
 const TodoList = () => {
@@ -35,7 +36,8 @@ const TodoList = () => {
             <h2>Ajouter une tache</h2>
             <TaskForm onTaskSubmit={handleNewTask} />
 
-            {/* Composant : Liste de tache */}
+            <h2>Liste des taches</h2>
+            <TaskList tasks={tasks} />
         </>
     );
 }

@@ -24,3 +24,7 @@
     - (Bonus) Gestion du focus
 - Composant TodoList _(State)_
     - Traiter les données envoyé par le formulaire
+- Composant TaskList & TaskItem
+    - [Si basé sur un mockup] Adapter le code html en JSX 
+    - Ajouter le style _(SCSS)_
+    - Convertir les données "JS" vers du "JSX"

@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import Header from './containers/Header/Header';
 
 function App() {
@@ -6,9 +6,11 @@ function App() {
   return (
     <>
       <Header />
-      <h1>Exo 05</h1>
+      <main>
+        <h1>Exo 05</h1>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

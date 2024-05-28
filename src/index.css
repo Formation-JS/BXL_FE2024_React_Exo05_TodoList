@@ -13,13 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+#root {
+  width: 100%;
 }
 
 body {
@@ -27,6 +22,11 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
+
+main {
+  width: calc(100vw - 2rem);
+  margin: auto;
 }
 
 h1 {
@@ -45,9 +45,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -55,13 +57,70 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+      color: #213547;
+      background-color: #ffffff;
   }
+
   a:hover {
-    color: #747bff;
+      color: #747bff;
   }
+
   button {
-    background-color: #f9f9f9;
+      background-color: #f9f9f9;
+  }
+}
+
+@media screen and (min-width : 1000px) {
+  main {
+      max-width: 60vw;
+  }
+}
+
+label::after {
+  content: ':';
+  margin-left: 0.5ch;
+  margin-right: 0.5ch;
+}
+
+select,
+input,
+textarea {
+  background-color: #242424;
+  border: solid 0.25ch;
+  border-color: #d2cbcbde;
+  border-radius: 0.5ch;
+  padding: 0.5ch;
+  font-family: inherit;
+  font-size: 0.85em;
+  resize: none;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: hotpink solid 0.1ch;
+}
+
+h1 {
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2);
+  background-clip: text;
+  color: transparent
+}
+
+p {
+  margin: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: light) {
+
+  select,
+  input,
+  textarea {
+      background-color: #ffffff;
+      border-color: #3e5365;
   }
 }

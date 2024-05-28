@@ -22,4 +22,5 @@
     - Gestion du formulaire _(Binding entre le form et le state)_
     - Interaction avec TodoList _(Props "Event" -> pour envoyé l'element au parent)_
     - (Bonus) Gestion du focus
-- - Composant TodoList _(Simple)_
+- Composant TodoList _(State)_
+    - Traiter les données envoyé par le formulaire

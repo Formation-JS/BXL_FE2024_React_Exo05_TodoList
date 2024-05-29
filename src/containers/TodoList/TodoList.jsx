@@ -58,13 +58,35 @@ const TodoList = () => {
         setTasks(tasks => tasks.filter(elem => elem.id !== taskId));
      }
 
+     // Gestion de la validation d'une element via un event de la "TaskList"
+     const handleFinishTask = (taskId) => {
+
+         //? V1 - Récuperation d'un élément et validation de celui-ci
+         /*
+        setTasks( tasks => {
+            // Copie des données
+            const copy = structuredClone(tasks);
+
+            // Modifier de l'element ciblé
+            const targetTask = copy.find(elem => elem.id === taskId)
+            targetTask.isDone = true
+
+            // Renvoyé la copie modifié
+            return copy
+        });¨
+        */
+
+        // V2 - Utilisation de la fonction "map"
+        setTasks(tasks => tasks.map(elem => (elem.id !== taskId) ? elem : { ...elem, isDone : true }));
+     }
+
     return (
         <>
             <h2>Ajouter une tache</h2>
             <TaskForm onTaskSubmit={handleNewTask} />
 
             <h2>Liste des taches</h2>
-            <TaskList tasks={tasks} onTaskDelete={handleDeleteTask} />
+            <TaskList tasks={tasks} onTaskDelete={handleDeleteTask} onTaskFinish={handleFinishTask}/>
         </>
     );
 }

@@ -29,3 +29,7 @@
     - Ajouter le style _(SCSS)_
     - Convertir les données "JS" vers du "JSX"
     - Interaction avec TodoList _(Deux props "Event -> Pour le delete et le finish)_
+- Fonctionnalité de filtre des resutlats
+    - Analyse et mockup
+    - Mise en place du JSX avec un State
+    - Appliquer les regles de filtre avec la fonction filter

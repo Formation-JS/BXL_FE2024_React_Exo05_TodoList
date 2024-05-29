@@ -31,13 +31,40 @@ const TodoList = () => {
 
      };
 
+     // Gestion de la suppression d'une element via un event de la "TaskList"
+     const handleDeleteTask = (taskId) => {
+        
+        //? V1 - Utilisation du 'splice' (Version un peu long a ecrire, mais ça fonctionne bien :p)
+        /*
+        setTasks(tasks => {
+            // Copie des données
+            const copy = structuredClone(tasks);
+
+            // Supprimer l'element dans la copie
+            const indexTarget = copy.findIndex(elem => elem.id === taskId);
+            copy.splice(indexTarget, 1);
+
+            // Renvoyé la copie modifié
+            return copy;
+        });
+        */
+
+        //? V2 - Utilisation du 'toSpliced'
+        /*
+        setTasks(tasks => tasks.toSpliced(tasks.findIndex(elem => elem.id === taskId), 1));
+        */
+
+        //? V3 - Utilisation du 'filter'
+        setTasks(tasks => tasks.filter(elem => elem.id !== taskId));
+     }
+
     return (
         <>
             <h2>Ajouter une tache</h2>
             <TaskForm onTaskSubmit={handleNewTask} />
 
             <h2>Liste des taches</h2>
-            <TaskList tasks={tasks} />
+            <TaskList tasks={tasks} onTaskDelete={handleDeleteTask} />
         </>
     );
 }

@@ -20,7 +20,7 @@
     - [Si basé sur un mockup] Adapter le code html en JSX 
     - Ajouter le style _(SCSS)_
     - Gestion du formulaire _(Binding entre le form et le state)_
-    - Interaction avec TodoList _(Props "Event" -> pour envoyé l'element au parent)_
+    - Interaction avec TodoList _(Props "Event" -> Pour envoyé l'element au parent)_
     - (Bonus) Gestion du focus
 - Composant TodoList _(State)_
     - Traiter les données envoyé par le formulaire
@@ -28,3 +28,4 @@
     - [Si basé sur un mockup] Adapter le code html en JSX 
     - Ajouter le style _(SCSS)_
     - Convertir les données "JS" vers du "JSX"
+    - Interaction avec TodoList _(Deux props "Event -> Pour le delete et le finish)_
